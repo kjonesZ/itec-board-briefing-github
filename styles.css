@@ -634,30 +634,108 @@ section[id], div[id], details[id] { scroll-margin-top: 1.5rem; }
     break-after: avoid;
   }
 
+  .print-class-diagram {
+    --connector-gap: 0.25in;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr);
+    align-items: center;
+    gap: var(--connector-gap);
+    margin-top: 0.08in;
+    break-inside: avoid;
+  }
+
+  .print-class-start, .print-class-options > div {
+    border: 0.75pt solid var(--muted-line);
+    padding: 0.06in 0.09in;
+    font-size: 9.75pt;
+    line-height: 1.25;
+  }
+  .print-class-start { position: relative; border-left: 2pt solid var(--brand-red); background: var(--tint); }
+  .print-class-start h3 { font: 700 10pt/1.2 var(--sans); }
+  .print-class-start p { margin-top: 0.025in; color: var(--subtle); }
+  .print-class-start::after {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: calc(var(--connector-gap) / 2 + 1pt);
+    border-top: 1pt solid var(--brand-red);
+    content: "";
+  }
+  .print-class-options { position: relative; display: grid; gap: 0.05in; }
+  .print-class-options::before {
+    position: absolute;
+    inset: 25% auto 25% calc(var(--connector-gap) / -2 + 0.5pt);
+    border-left: 1pt solid var(--brand-red);
+    content: "";
+  }
+  .print-class-options > div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.27in minmax(0, 1fr);
+    gap: 0.08in;
+    align-items: baseline;
+  }
+  .print-class-options > div::before {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    width: calc(var(--connector-gap) / 2 + 1pt);
+    border-top: 1pt solid var(--brand-red);
+    content: "";
+  }
+  .print-class-options dt { font-weight: 700; }
+  .print-class-options dd { color: var(--subtle); }
+
+  .print-example-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 1.48in;
+    align-items: center;
+    gap: 0.16in;
+    break-inside: avoid;
+  }
+  .print-example-intro img { width: 100%; height: 0.76in; object-fit: contain; }
+
   .print-flow {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.12in;
-    margin: 0.13in 0 0;
+    gap: 0.16in;
+    margin: 0.06in 0 0;
     padding: 0;
     list-style: none;
     break-inside: avoid;
   }
 
-  .print-flow li { border-top: 1pt solid var(--brand-red); padding-top: 0.06in; }
-  .print-flow h3 { margin-bottom: 0.035in; font: 700 10pt/1.22 var(--sans); }
-  .print-flow p { color: var(--subtle); font-size: 9.75pt; }
+  .print-flow li {
+    position: relative;
+    border: 0.75pt solid var(--muted-line);
+    border-top: 1.5pt solid var(--brand-red);
+    padding: 0.055in 0.08in 0.065in;
+  }
+  .print-flow li:not(:last-child)::after {
+    position: absolute;
+    top: calc(50% - 3pt);
+    left: calc(100% + 2pt);
+    width: 5.5pt;
+    height: 5.5pt;
+    border-top: 1pt solid var(--brand-red);
+    border-right: 1pt solid var(--brand-red);
+    transform: rotate(45deg);
+    content: "";
+  }
+  .print-flow h3 { margin-bottom: 0.03in; font: 700 10pt/1.2 var(--sans); }
+  .print-flow p { color: var(--subtle); font-size: 9.5pt; line-height: 1.24; }
 
-  .print-skills { padding: 0.10in 0.14in; border: 0.75pt solid var(--muted-line); break-inside: avoid; }
-  .print-connections > div {
+  .print-skills { padding: 0.085in 0.14in; border-left: 2pt solid var(--brand-red); background: var(--tint); break-inside: avoid; }
+
+  .print-connections {
     display: grid;
-    grid-template-columns: 1.44in minmax(0, 1fr);
-    gap: 0.12in;
-    padding: 0.055in 0;
-    border-bottom: 0.5pt solid var(--line);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.16in;
     break-inside: avoid;
   }
-  .print-connections dt { font-weight: 700; }
+  .print-connections > div { border-top: 0.75pt solid var(--muted-line); padding-top: 0.055in; }
+  .print-connections dt { font-size: 10pt; font-weight: 700; }
+  .print-connections dd { margin-top: 0.025in; color: var(--subtle); font-size: 9.5pt; line-height: 1.26; }
 
   .print-footer { margin-top: 0.17in; color: var(--subtle); font-size: 9pt; break-inside: avoid; }
   .print-site strong { margin-right: 0.08in; color: var(--ink); }
