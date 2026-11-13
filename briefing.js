@@ -80,9 +80,10 @@ document.querySelectorAll(".plan-pin").forEach((pin) => {
   });
 });
 
-const printButton = document.querySelector("[data-print]");
-printButton.addEventListener("click", () => window.print());
-printButton.hidden = false;
+document.querySelectorAll("[data-print]").forEach((button) => {
+  button.addEventListener("click", () => window.print());
+  button.hidden = false;
+});
 
 const notes = document.getElementById("speaker-notes");
 document.querySelector('a[href="#speaker-notes"]').addEventListener("click", () => {

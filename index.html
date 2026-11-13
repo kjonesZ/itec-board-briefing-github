@@ -513,6 +513,11 @@
           <div><dt>Operational performance</dt><dd>Can the team show what it verified and name who will investigate if an event is missing?</dd></div>
         </dl>
 
+        <div class="handout-actions" role="group" aria-label="One-page board briefing">
+          <a class="button" href="itec-board-brief.pdf" download="ITEC Board Brief.pdf">Download one-page PDF <span aria-hidden="true">↓</span></a>
+          <button class="print-button" type="button" data-print hidden>Print brief</button>
+        </div>
+
         <details class="speaker-notes" id="speaker-notes" open>
           <summary><span>Speaker notes</span><small>90-second opening</small></summary>
           <div class="notes-content" id="opening">
@@ -552,26 +557,52 @@
     <div class="plan-dialog-image"></div>
   </dialog>
 
-  <article class="print-only" aria-label="Printable ITEC board briefing">
-    <div class="print-brand">
+  <article class="print-only" aria-labelledby="print-brief-title">
+    <header class="print-brand">
       <img src="assets/sinclair-horizontal-hires.png" width="3000" height="744" alt="Sinclair College">
-      <p class="eyebrow">Board briefing</p>
-    </div>
-    <h1>ITEC | The building is part of the course</h1>
-    <p class="print-intro">In Building 8, students would see how work in one class affects people and systems in another. Each course keeps its learning objectives while students practice how robotics, IT, data, and operations teams work together on the job.</p>
-    <h2>When a plant adds an inspection step</h2>
-    <p>On the APT line Sinclair is considering, robotics students could test a new inspection step and work with networking students to verify the controller’s message reaches the second-level Instructional Server Center (ISC). Server students would check the record, analytics students would compare cycle times in SQL, and supply chain students would estimate when the batch could be received.</p>
-    <h2>What students can demonstrate</h2>
-    <p>Students hand off what changed, how they verified it, what it means for production, and who needs to act next. Employers can use that handoff to assess both technical troubleshooting and communication across teams.</p>
-    <h2>What else can students see?</h2>
-    <p>Analytics students work with data from Smart Factory, Robotics, Supply Chain / RFID, Internet of Things, and Emerging Tech. The lab also brings building-wide HVAC and facility readings to the large displays. Students can compare a fan’s start time with temperature readings and explain what they would ask Facilities to check.</p>
-    <h2>From production to inventory</h2>
-    <p>Robotics students make and pack a batch. RFID students verify the tags. A proposed mobile robot carries the tote to a receiving classroom, where supply chain students compare what arrived with what was expected and post inventory. ISC students capture the events and use SQL to connect production, transport, and receiving records.</p>
-    <h2>Two cybersecurity operations centers</h2>
-    <p>The Working SNOC would actively monitor Sinclair’s cybersecurity. In the Teaching SNOC, students would practice reviewing and responding to simulated incidents.</p>
-    <h2>Communication in Context</h2>
-    <p>Faculty, IT, and Facilities support the teaching environment. Students learn to connect the data they see to the decisions another team has to make.</p>
-    <p class="print-sources"><a href="https://www.sinclair.edu/news/article/sinclair-announces-integrated-technology-education-center-itec-a-30-million-initiative-set-to-meet-the-convergence-of-it-cybersecurity-ai/">Sinclair’s project announcement</a> · <a href="https://aptmfg.com/products/csm/">APT Connected Smart Manufacturing</a> · <a href="https://thecommcontext.com/">Communication in Context</a></p>
+      <div class="print-identification">
+        <p class="eyebrow">Board briefing</p>
+        <p>Building 8 · Dayton Campus</p>
+      </div>
+    </header>
+
+    <h1 id="print-brief-title">Integrated Technology Education Center</h1>
+    <blockquote class="print-quote"><p>Sinclair's Integrated Technology Strategy brings people from different disciplines into conversation and learning around a shared problem, so students connect technical knowledge with the setting in which it is used. ITEC will provide a dedicated experiential learning facility designed to create these experiences.</p></blockquote>
+
+    <section class="print-section" aria-labelledby="print-purpose">
+      <h2 id="print-purpose">The building is part of the course</h2>
+      <p>A change made during a regular class would show up in the systems other students are learning to operate. Each course keeps its learning objectives while students practice how technicians, analysts, and operations teams work together.</p>
+    </section>
+
+    <section class="print-section" aria-labelledby="print-example">
+      <h2 id="print-example">How an inspection change travels</h2>
+      <p>On the APT training line Sinclair is considering, a robotics class could add a quality check at packaging and follow its impact across four teams.</p>
+      <ol class="print-flow">
+        <li><h3>Robotics &amp; controls</h3><p>Test the new inspection step and measure the time per part.</p></li>
+        <li><h3>Network engineering</h3><p>Verify that the controller’s message reaches the servers.</p></li>
+        <li><h3>Instructional Server Center</h3><p>Confirm that the second-level teaching servers stored the event.</p></li>
+        <li><h3>Analytics &amp; supply chain</h3><p>Compare cycle times in SQL and estimate when the batch will be ready.</p></li>
+      </ol>
+    </section>
+
+    <section class="print-section print-handoff" aria-labelledby="print-skills">
+      <h2 id="print-skills">What students can show an employer</h2>
+      <p>A shift handoff that states what changed, what the team verified, how it affects production, and who owns the next action.</p>
+    </section>
+
+    <section class="print-section" aria-labelledby="print-connections">
+      <h2 id="print-connections">Where else students use these skills</h2>
+      <dl class="print-connections">
+        <div><dt>Supply chain &amp; RFID</dt><dd>A proposed mobile robot would move finished products to receiving. Students would match product tags and counts against the shipment record before updating inventory.</dd></div>
+        <div><dt>Facilities &amp; data</dt><dd>Students would compare building HVAC readings on large displays and explain what Facilities should check.</dd></div>
+        <div><dt>Cybersecurity</dt><dd>The Working SNOC would monitor Sinclair’s systems. In the Teaching SNOC, students would practice responding to simulated alerts.</dd></div>
+      </dl>
+    </section>
+
+    <footer class="print-footer">
+      <p class="print-site"><strong>Full ITEC briefing</strong> <a href="https://kjonesz.github.io/itec-board-briefing-github/">kjonesz.github.io/itec-board-briefing-github</a></p>
+      <p class="print-sources"><a href="https://www.sinclair.edu/news/article/sinclair-announces-integrated-technology-education-center-itec-a-30-million-initiative-set-to-meet-the-convergence-of-it-cybersecurity-ai/">Sinclair project announcement</a> · <a href="https://aptmfg.com/products/csm/">APT training system</a> · <a href="https://thecommcontext.com/">Communication in Context</a></p>
+    </footer>
   </article>
 </body>
 </html>
