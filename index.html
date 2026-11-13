@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ed">
+  <meta name="description" content="See how Sinclair’s Integrated Technology Education Center would connect the smart factory, classroom network, instructional servers, and building data so students can learn from everyday operations.">
+  <meta property="og:title" content="ITEC | Board Briefing">
+  <meta property="og:description" content="Follow a robotics or HVAC change through the classroom network, instructional servers, and analytics displays at Sinclair’s proposed ITEC.">
+  <meta property="og:url" content="https://itec-board-briefing.kylejones846.chatgpt.site/">
+  <meta property="og:image" content="https://itec-board-briefing.kylejones846.chatgpt.site/assets/learning-lab.jpg">
+  <title>ITEC | Board Briefing</title>
+  <link rel="icon" href="assets/itec.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="briefing.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the briefing</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="wordmark" href="#main" aria-label="Sinclair College · ITEC briefing home">
+        <img src="assets/sinclair-horizontal.png" width="500" height="124" alt="Sinclair College">
+      </a>
+      <nav class="primary-nav" aria-label="Briefing">
+        <a href="#vision">Vision</a>
+        <a href="#building">The building</a>
+        <a href="#apt">APT example</a>
+        <a href="#supply-chain">Supply chain</a>
+        <a href="#board">Board discussion</a>
+      </nav>
+      <button class="print-button" type="button" data-print hidden>Print brief <span aria-hidden="true">↗</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span> ITEC board briefing</p>
+        <h1 id="title">The building is<br><em>part of the course</em></h1>
+        <p class="hero-intro">At Sinclair’s Integrated Technology Education Center, students could see how the work they do in class affects other classrooms, the network, and the building they learn in.</p>
+        <div class="hero-actions">
+          <a class="button" href="#building">Explore the building <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#speaker-notes">Speaker notes</a>
+        </div>
+      </div>
+      <figure class="hero-image">
+        <img src="assets/learning-lab.jpg" width="1500" height="1000" alt="Three students compare a chart on a monitor beside an enclosed training robot.">
+        <figcaption><strong>Building 8 · Dayton Campus</strong><span>Concept illustration</span></figcaption>
+      </figure>
+    </section>
+
+    <section id="vision" class="vision" aria-labelledby="vision-title">
+      <div class="wrap section-pad">
+        <div class="section-lead">
+          <div>
+            <p class="eyebrow">The teaching approach</p>
+            <h2 id="vision-title">Communication <em>in Context</em></h2>
+          </div>
+          <p class="section-intro">Each course keeps its own learning objectives. The building gives students a shared setting where they can see who relies on their work and explain what a change means for them.</p>
+        </div>
+        <div class="vision-grid">
+          <article>
+            <h3>Systems exchange signals</h3>
+            <p>A robot, a sensor, and a controller report what happened at each station. The network carries those signals to the systems that need them.</p>
+          </article>
+          <article>
+            <h3>Students add context</h3>
+            <p>They connect a signal to the work in progress and the people who rely on it. A change that looks small at a robot can affect when another class receives a batch.</p>
+          </article>
+          <article>
+            <h3>Teams explain a decision</h3>
+            <p>Students explain what they know, what they still need to check, and how the next team’s needs could change their decision.</p>
+          </article>
+        </div>
+        <p class="vision-source"><a class="text-link" href="https://thecommcontext.com/">Read Kyle Jones’s Communication in Context framework <span aria-hidden="true">↗</span></a></p>
+      </div>
+    </section>
+
+    <section class="building" id="building" aria-labelledby="building-title">
+      <div class="wrap section-pad">
+        <div class="section-lead">
+          <div>
+            <p class="eyebrow">Building 8</p>
+            <h2 id="building-title">How a change in one room <em>shows up in another</em></h2>
+          </div>
+          <p class="section-intro">The Smart Factory and the building’s own systems would give students something real to observe. The classroom network would carry their data to the second-level Instructional Server Center (ISC). The Data Analytics Lab would make it visible on large screens.</p>
+        </div>
+
+        <div class="signal-trace" data-tabs id="follow-a-change">
+          <div class="signal-heading">
+            <div>
+              <p class="eyebrow">Illustrative examples</p>
+              <h3>Follow a change</h3>
+            </div>
+            <div class="segmented" data-tab-list aria-label="Change to follow" hidden>
+              <button type="button" id="tab-trace-robot" data-panel="trace-robot">Robotics class</button>
+              <button type="button" id="tab-trace-hvac" data-panel="trace-hvac">Building HVAC</button>
+            </div>
+          </div>
+
+          <div class="trace-panel" id="trace-robot">
+            <p class="trace-summary"><strong>A robotics class adds an inspection step.</strong> During a regular practice run, the robot sends a new event when inspection is complete. The new step changes which messages travel over the network and what students in other rooms see.</p>
+            <ol class="building-flow">
+              <li>
+                <span class="flow-step">01 · Generate</span>
+                <h4>Smart Factory Operations Lab</h4>
+                <p>The controller reports inspection completion and sends the cycle time.</p>
+                <span class="trace-result">Inspection complete</span>
+              </li>
+              <li>
+                <span class="flow-step">02 · Carry</span>
+                <h4>Network Engineering / Fiber Optics Lab</h4>
+                <p>Students follow the message across the classroom network and check that it reached the servers.</p>
+                <span class="trace-result">Message received</span>
+              </li>
+              <li>
+                <span class="flow-step">03 · Record</span>
+                <h4>Instructional Server Center</h4>
+                <p>Students upstairs verify that the teaching database saved the station, time, and cycle length.</p>
+                <span class="trace-result">Cycle time · 12 s → 14 s</span>
+              </li>
+              <li>
+                <span class="flow-step">04 · Interpret</span>
+                <h4>Data Analytics Lab</h4>
+                <p>A large display shows the change in cycle time. Supply chain students can ask what it means for the next batch.</p>
+                <span class="trace-result">When will the batch be ready?</span>
+              </li>
+            </ol>
+          </div>
+
+          <div class="trace-panel" id="trace-hvac">
+            <p class="trace-summary"><strong>The building starts a scheduled ventilation cycle.</strong> Its heating, ventilation, and air conditioning (HVAC) equipment reports that a fan has started. Students can compare that event with the temperature trend.</p>
+            <ol class="building-flow">
+              <li>
+                <span class="flow-step">01 · Generate</span>
+                <h4>Building HVAC systems</h4>
+                <p>The facility reports fan status and temperature readings from across the building.</p>
+                <span class="trace-result">Fan starts at 9:00 a.m.</span>
+              </li>
+              <li>
+                <span class="flow-step">02 · Carry</span>
+                <h4>Network Engineering / Fiber Optics Lab</h4>
+                <p>The classroom network makes a read-only feed of facility readings available to the instructional servers.</p>
+                <span class="trace-result">Status and readings received</span>
+              </li>
+              <li>
+                <span class="flow-step">03 · Record</span>
+                <h4>Instructional Server Center</h4>
+                <p>Servers store the fan event and temperature readings so students can compare them by time and location.</p>
+                <span class="trace-result">Time and zone recorded</span>
+              </li>
+              <li>
+                <span class="flow-step">04 · Interpret</span>
+                <h4>Data Analytics Lab</h4>
+                <p>A large display puts the fan event beside the temperature trend. Students can explain what they would ask Facilities to check.</p>
+                <span class="trace-result">What changed after startup?</span>
+              </li>
+            </ol>
+          </div>
+          <p class="section-note">Example events and values illustrate the planned flow of information.</p>
+        </div>
+
+        <div class="plan-explorer" data-tabs id="floor-plans">
+          <div class="plan-heading">
+            <div>
+              <p class="eyebrow">Floor plans</p>
+              <h3>Find the rooms on the plan</h3>
+            </div>
+            <div class="segmented" data-tab-list aria-label="Floor plan view" hidden>
+              <button type="button" id="tab-plan-infrastructure" data-panel="plan-infrastructure">ISC, network &amp; cybersecurity</button>
+              <button type="button" id="tab-plan-classrooms" data-panel="plan-classrooms">Classroom labs</button>
+            </div>
+          </div>
+
+          <div class="plan-view" id="plan-infrastructure" data-plan-title="ISC, network &amp; cybersecurity floor plan">
+            <figure class="plan-figure">
+              <div class="plan-map">
+                <img src="assets/itec-plan-isc.jpg" width="2000" height="1183" loading="lazy" alt="Building 8 planning view showing the Instructional Server Center beside the Network Engineering / Fiber Optics Lab, with the Data Analytics Lab farther along the same side of the atrium and the Teaching and Working SNOCs across it.">
+                <a class="plan-pin" hidden style="--x: 55.2%; --y: 48.1%" href="#plan-isc" aria-label="1. Instructional Server Center">1</a>
+                <a class="plan-pin" hidden style="--x: 60.6%; --y: 36.9%" href="#plan-network" aria-label="2. Network Engineering and Fiber Optics Lab">2</a>
+                <a class="plan-pin" hidden style="--x: 65.1%; --y: 21.8%" href="#plan-analytics" aria-label="3. Data Analytics Lab">3</a>
+                <a class="plan-pin" hidden style="--x: 51.9%; --y: 64.9%" href="#plan-teaching-snoc" aria-label="4. Teaching SNOC">4</a>
+                <a class="plan-pin" hidden style="--x: 57.5%; --y: 71.5%" href="#plan-working-snoc" aria-label="5. Working SNOC">5</a>
+              </div>
+              <figcaption><span>Planning view supplied for the briefing</span><button type="button" class="plan-enlarge" data-enlarge-plan hidden>Enlarge plan <span aria-hidden="true">↗</span></button></figcaption>
+            </figure>
+            <ol class="plan-rooms">
+              <li id="plan-isc"><span class="plan-number" aria-hidden="true">1</span><div><h4>Instructional Server Center</h4><p>The planned second-level teaching data center houses the rack-mounted servers that collect and store data from the factory and building.</p></div></li>
+              <li id="plan-network"><span class="plan-number" aria-hidden="true">2</span><div><h4>Network Engineering / Fiber Optics Lab</h4><p>Students learn how the network connects the classrooms and practice monitoring the connections that carry their data to the ISC.</p></div></li>
+              <li id="plan-analytics"><span class="plan-number" aria-hidden="true">3</span><div><h4>Data Analytics Lab</h4><p>Students use SQL and visualization tools to compare data across rooms. Large screens make classroom and facility activity visible.</p></div></li>
+              <li id="plan-teaching-snoc"><span class="plan-number" aria-hidden="true">4</span><div><h4>Teaching SNOC</h4><p>Students practice cybersecurity monitoring and response in a classroom simulation.</p></div></li>
+              <li id="plan-working-snoc"><span class="plan-number" aria-hidden="true">5</span><div><h4>Working SNOC</h4><p>The center would actively monitor cybersecurity for Sinclair.</p></div></li>
+            </ol>
+          </div>
+
+          <div class="plan-view" id="plan-classrooms" data-plan-title="Classroom labs floor plan">
+            <figure class="plan-figure">
+              <div class="plan-map">
+                <img src="assets/itec-plan-classrooms.jpg" width="2000" height="1206" loading="lazy" alt="Building 8 planning view showing the Smart Factory Operations Lab, Robotics Classroom, Emerging Tech Lab, Supply Chain / RFID Lab, and Internet of Things Lab around the atrium.">
+                <a class="plan-pin" hidden style="--x: 84.8%; --y: 54.1%" href="#plan-factory" aria-label="1. Smart Factory Operations Lab">1</a>
+                <a class="plan-pin" hidden style="--x: 80.2%; --y: 72.2%" href="#plan-robotics" aria-label="2. Robotics Classroom">2</a>
+                <a class="plan-pin" hidden style="--x: 75.6%; --y: 78.7%" href="#plan-emerging" aria-label="3. Emerging Tech Lab">3</a>
+                <a class="plan-pin" hidden style="--x: 69.7%; --y: 85.3%" href="#plan-supply" aria-label="4. Supply Chain and RFID Lab">4</a>
+                <a class="plan-pin" hidden style="--x: 61.9%; --y: 76.1%" href="#plan-iot" aria-label="5. Internet of Things Lab">5</a>
+              </div>
+              <figcaption><span>Planning view supplied for the briefing</span><button type="button" class="plan-enlarge" data-enlarge-plan hidden>Enlarge plan <span aria-hidden="true">↗</span></button></figcaption>
+            </figure>
+            <ol class="plan-rooms">
+              <li id="plan-factory"><span class="plan-number" aria-hidden="true">1</span><div><h4>Smart Factory Operations Lab</h4><p>The proposed APT line would generate production counts, machine status, and cycle times.</p></div></li>
+              <li id="plan-robotics"><span class="plan-number" aria-hidden="true">2</span><div><h4>Robotics Classroom</h4><p>Students program and test robot behavior, then compare the events their changes produce.</p></div></li>
+              <li id="plan-emerging"><span class="plan-number" aria-hidden="true">3</span><div><h4>Emerging Tech Lab</h4><p>Students could test a new tool or simulation against records from the existing workflow.</p></div></li>
+              <li id="plan-supply"><span class="plan-number" aria-hidden="true">4</span><div><h4>Supply Chain / RFID Lab</h4><p>Students track product IDs, receive finished goods, and reconcile inventory.</p></div></li>
+              <li id="plan-iot"><span class="plan-number" aria-hidden="true">5</span><div><h4>Internet of Things Lab</h4><p>Students work with connected sensors and compare equipment readings with production or facility data.</p></div></li>
+            </ol>
+          </div>
+          <p class="plan-note">The Data Analytics Lab would bring these feeds together with data from HVAC systems throughout the building and other facility equipment. Large displays would show what is happening across the center during the day.</p>
+        </div>
+
+        <div class="isc-feature" id="isc">
+          <figure class="isc-image">
+            <img src="assets/itec-isc-rendering.jpg" width="1578" height="1264" loading="lazy" alt="Architectural rendering of a glass-fronted room along the second-level walkway at the planned Instructional Server Center.">
+            <figcaption>Second-level ISC · Architectural rendering supplied for the briefing</figcaption>
+          </figure>
+          <div class="isc-copy">
+            <p class="eyebrow">Second level</p>
+            <h3>Inside the Instructional Server Center</h3>
+            <p>The ISC is ITEC’s teaching data center. Rack-mounted servers in this room would receive data from the APT line, the classroom labs, and facility systems such as HVAC.</p>
+            <p>When a robot reports a completed cycle, students in the ISC could verify that the message arrived, check that the record was saved in the teaching database, and make the data available to the Data Analytics Lab. They would also practice monitoring the servers and tracing a missing record.</p>
+          </div>
+        </div>
+
+        <div class="cyber-centers" id="cybersecurity" aria-labelledby="cyber-title">
+          <div class="signal-heading">
+            <div>
+              <p class="eyebrow">Cybersecurity</p>
+              <h3 id="cyber-title">Two operations centers</h3>
+            </div>
+          </div>
+          <div class="cyber-grid">
+            <article>
+              <p class="eyebrow">Live Sinclair operations</p>
+              <h4>Working SNOC</h4>
+              <p>The Working Security Network Operations Center would actively monitor Sinclair’s cybersecurity. The college’s security team could review real alerts, investigate what happened, and coordinate a response with the teams responsible for affected systems.</p>
+            </article>
+            <article>
+              <p class="eyebrow">Classroom simulation</p>
+              <h4>Teaching SNOC</h4>
+              <p>The Teaching Security Network Operations Center would serve as a classroom. Students could practice reviewing simulated alerts, deciding what needs attention, and explaining the next steps to IT or operations in a training scenario.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="operations">
+          <h3>Learning from day-to-day operations</h3>
+          <dl class="operations-grid">
+            <div><dt>During a regular class</dt><dd>Robotics students run their usual exercises. Networking, server, and analytics students can see the events those exercises generate during their own class periods.</dd></div>
+            <div><dt>As the building operates</dt><dd>Large displays show how equipment, inventory, and facility systems are performing. Students see how a change in one area affects what people in another area know or do.</dd></div>
+            <div><dt>When something needs attention</dt><dd>Students document what they observed and pass it to the responsible team. Faculty, IT, and Facilities oversee access, maintenance, and support.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="apt" class="wrap section-pad apt-section" aria-labelledby="apt-title">
+      <div class="section-lead">
+        <div>
+          <p class="eyebrow">The APT example</p>
+          <h2 id="apt-title">One training line, <em>several disciplines</em></h2>
+        </div>
+        <p class="section-intro">A manufacturing student might first see a robot that stopped. An IT student sees messages moving between systems. A data student can reconstruct the sequence. Each brings a skill the others need.</p>
+      </div>
+
+      <div class="equipment">
+        <figure class="equipment-image">
+          <img src="assets/apt-csm.jpg" width="1500" height="1226" loading="lazy" alt="APT’s modular CSM training line with multiple FANUC robot stations and operator displays.">
+          <figcaption>One configuration shown. Image from APT Manufacturing Solutions.</figcaption>
+        </figure>
+        <div class="equipment-copy">
+          <p class="eyebrow status"><span aria-hidden="true"></span> Equipment under consideration</p>
+          <h3>APT Connected Smart Manufacturing System</h3>
+          <p>This is the robotics training system Sinclair is considering for ITEC. APT’s CSM stations can run individually for focused instruction or connect into a full line for a shared project.</p>
+          <p>In APT’s logistics example, robots mark, assemble, and package parts. Radio-frequency identification (RFID) tags track the parts, programmable controllers coordinate the stations, and a SQL database supports analysis.</p>
+          <a class="text-link" href="https://aptmfg.com/products/csm/">View APT’s system details <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="scenario" id="walkthrough" data-tabs>
+        <div class="scenario-heading">
+          <p class="eyebrow">Illustrative teaching scenario</p>
+          <h3>Why did packaging stop?</h3>
+          <p>A tagged part reaches packaging and the line pauses. Follow the same event from six student perspectives.</p>
+        </div>
+
+        <div class="scenario-grid">
+          <div class="timeline" aria-labelledby="timeline-title">
+            <h4 id="timeline-title">Training event log</h4>
+            <ol>
+              <li><time>10:14:02</time><div><strong>Assembly</strong><span>Part 027 is released.</span></div></li>
+              <li><time>10:14:03</time><div><strong>Packaging</strong><span>Sensor detects the part.</span></div></li>
+              <li><time>10:14:08</time><div><strong>Controller</strong><span>Packaging pauses while waiting for the part ID.</span></div></li>
+            </ol>
+          </div>
+
+          <div class="roles">
+            <div class="role-tabs" data-tab-list aria-label="Student disciplines" hidden>
+              <button type="button" id="tab-robotics" data-panel="role-robotics">Robotics</button>
+              <button type="button" id="tab-controls" data-panel="role-controls">Controls</button>
+              <button type="button" id="tab-it" data-panel="role-it">IT &amp; networking</button>
+              <button type="button" id="tab-cyber" data-panel="role-cyber">Cybersecurity</button>
+              <button type="button" id="tab-data" data-panel="role-data">SQL &amp; analytics</button>
+              <button type="button" id="tab-operations" data-panel="role-operations">Quality &amp; operations</button>
+            </div>
+
+            <article class="role-panel" id="role-robotics">
+              <h4>Is the robot ready?</h4>
+              <p>Robotics students read the robot’s status and check whether it received an instruction to move. They can confirm what the robot was ready to do when the line paused.</p>
+              <p class="handoff"><strong>What they tell the team</strong> “The robot is ready and waiting for a command. Let’s check what the controller needs before it can send one.”</p>
+            </article>
+
+            <article class="role-panel" id="role-controls">
+              <h4>What is the controller waiting for?</h4>
+              <p>Industrial controls students trace the sequence in the programmable logic controller (PLC). The sensor detected a part, and the controller is waiting for a valid ID from the tag reader.</p>
+              <p class="handoff"><strong>What they tell the team</strong> “Packaging detected the part. The next step requires an ID, and the controller is still waiting for it.”</p>
+            </article>
+
+            <article class="role-panel" id="role-it">
+              <h4>Did the station receive the message?</h4>
+              <p>IT students check the station’s connection and look for a record of the tag reader’s message. The station stayed online during the pause, so they check the handoff from reader to controller.</p>
+              <p class="handoff"><strong>What they tell the team</strong> “The station stayed connected. We still need to verify whether the reader sent a valid ID.”</p>
+            </article>
+
+            <article class="role-panel" id="role-cyber">
+              <h4>Can everyone see the evidence safely?</h4>
+              <p>In the proposed ITEC exercise, cybersecurity students verify that the team can read the training logs and that only designated operators can change machine settings. The Teaching SNOC could use a simulated version of the event to practice handing off a finding.</p>
+              <p class="handoff"><strong>What they tell the team</strong> “Everyone investigating the pause can see the logs. Let’s route any change to the designated operator and record it.”</p>
+            </article>
+
+            <article class="role-panel" id="role-data">
+              <h4>Can the event records tell us what happened?</h4>
+              <p>Data students use SQL to query the training database. They line up the last confirmed record for part 027 with the next station’s timestamp and check for the missing identification event.</p>
+              <p class="handoff"><strong>What they tell the team</strong> “The timestamps suggest part 027 reached packaging at 10:14:03. We still need the ID confirmation to be sure.”</p>
+            </article>
+
+            <article class="role-panel" id="role-operations">
+              <h4>What should the team do next?</h4>
+              <p>Quality and operations students account for the affected part and decide what evidence they need before it can move forward. They prepare a clear handoff for the instructor or next shift.</p>
+              <p class="handoff"><strong>What they tell the team</strong> “Keep part 027 on hold. We need a supervised test that shows the ID is recorded before we release it.”</p>
+            </article>
+          </div>
+        </div>
+
+        <details class="team-brief">
+          <summary>Read the team’s briefing</summary>
+          <p>“Packaging paused while waiting for a valid ID. The sequence points to part 027. The robot was ready and the station stayed connected. Our next step is to verify the reader-to-controller handoff and record the result of a supervised test before releasing the part.”</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="supply-chain" class="supply-chain" aria-labelledby="supply-title">
+      <div class="wrap section-pad">
+        <div class="section-lead">
+          <div>
+            <p class="eyebrow">Supply chain &amp; emerging technology</p>
+            <h2 id="supply-title">Follow a product <em>beyond the line</em></h2>
+          </div>
+          <p class="section-intro">The smart factory could make a real training product for another class to receive. Supply chain students would work with what the robotics students produce, and students in the ISC would keep a record of the trip.</p>
+        </div>
+
+        <ol class="shipment-flow" aria-label="Physical movement of the finished product">
+          <li>
+            <span class="flow-step">01 · Smart factory lab</span>
+            <h3>Make and pack</h3>
+            <p>Robotics and controls students could assemble and pack tins of marked parts on the APT line and stage the finished tote for pickup.</p>
+          </li>
+          <li>
+            <span class="flow-step">02 · RFID checkpoint</span>
+            <h3>Tag and verify</h3>
+            <p>RFID students use readers at the line to verify item IDs. They associate those IDs with a batch and check which items are ready for pickup.</p>
+          </li>
+          <li>
+            <span class="flow-step">03 · Between classrooms</span>
+            <h3>Move the tote</h3>
+            <p>A proposed autonomous mobile robot (AMR) would carry the tote from the line to a receiving classroom and report pickup and delivery.</p>
+          </li>
+          <li>
+            <span class="flow-step">04 · Receiving classroom</span>
+            <h3>Receive and inventory</h3>
+            <p>Supply chain students compare the physical count and RFID reads with the expected shipment. They post the verified receipt, record the storage location, and investigate any mismatch.</p>
+          </li>
+        </ol>
+
+        <div class="data-route">
+          <h3>What the ISC records</h3>
+          <p>ISC students would collect production events from the APT line, reads from the RFID checkpoints, delivery status from the mobile robot, and the receiving record. In a teaching database, they’d use SQL to connect those events by batch or item ID, verify that each step was recorded, and share exceptions with the team that can resolve them. A shared dashboard could show which batches are ready, in transit, received, or on hold.</p>
+        </div>
+
+        <div class="receipt-demo">
+          <div class="receipt-intro">
+            <p class="eyebrow">Illustrative receiving exercise</p>
+            <h3>Did the whole batch arrive?</h3>
+            <p>The delivery status tells us the tote arrived. The receiving team still needs to confirm what’s inside.</p>
+            <div class="receipt-toggle" data-receipt-toggle role="group" aria-label="Receiving outcome" hidden>
+              <button type="button" data-receipt-mode="matched" aria-pressed="true">All tags read</button>
+              <button type="button" data-receipt-mode="exception" aria-pressed="false">One tag missing</button>
+            </div>
+          </div>
+          <div class="receipt-evidence" data-receipt-evidence aria-live="polite">
+            <div class="receipt-panel" data-receipt-panel="matched">
+              <p class="receipt-status">Batch B-027 · Ready to receive</p>
+              <dl class="receipt-counts">
+                <div><dt>Expected</dt><dd>12</dd></div>
+                <div><dt>Counted</dt><dd>12</dd></div>
+                <div><dt>RFID reads</dt><dd>12</dd></div>
+              </dl>
+              <p>Supply chain students confirm the item IDs and post the receipt. ISC students check that the production, delivery, and receiving records agree.</p>
+            </div>
+            <div class="receipt-panel" data-receipt-panel="exception">
+              <p class="receipt-status">Batch B-027 · Receipt on hold</p>
+              <dl class="receipt-counts">
+                <div><dt>Expected</dt><dd>12</dd></div>
+                <div><dt>Counted</dt><dd>12</dd></div>
+                <div><dt>RFID reads</dt><dd>11</dd></div>
+              </dl>
+              <p>The tote contains all 12 items, but one ID didn’t register at receiving. Supply chain holds the receipt, RFID students recheck the tag, and ISC students use the earlier reads to trace the missing ID.</p>
+            </div>
+          </div>
+        </div>
+        <p class="section-note">Proposed ITEC workflow. The APT line is under purchase consideration. The mobile delivery robot is a separate proposed addition.</p>
+      </div>
+    </section>
+
+    <section class="wrap section-pad future" aria-labelledby="future-title">
+      <div class="section-lead">
+        <div>
+          <p class="eyebrow">Future readiness</p>
+          <h2 id="future-title">How ITEC can adapt <em>as tools change</em></h2>
+        </div>
+        <p class="section-intro">The building needs to make it practical for faculty to teach with the next tool and for students to work with people whose expertise differs from their own.</p>
+      </div>
+      <dl class="future-plan">
+        <div>
+          <dt>Build for reuse</dt>
+          <dd>Plan flexible lab layouts, power and network access, and shared teaching data so programs can add or swap equipment and keep using the same spaces.</dd>
+        </div>
+        <div>
+          <dt>Connect existing courses</dt>
+          <dd>Faculty can use the same live environment from within their current courses. A robotics instructor might point out the effect of a change on a display. A data instructor could use those same records to teach SQL.</dd>
+        </div>
+        <div>
+          <dt>Give new tools real data to work with</dt>
+          <dd>As new technology arrives, students could test it against systems they already understand. An emerging technology class might try an AI tool that flags unusual HVAC readings, then verify those flags against the underlying records.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="board" class="board" aria-labelledby="board-title">
+      <div class="wrap section-pad">
+        <div class="section-lead">
+          <div>
+            <p class="eyebrow">Board discussion</p>
+            <h2 id="board-title">What should students be able to see?</h2>
+          </div>
+          <p class="section-intro">The first demonstration could use a routine robotics class. Change one step, follow the event to the second-level ISC, and show what another class can learn from it.</p>
+        </div>
+
+        <dl class="board-measures">
+          <div><dt>Program use</dt><dd>Which existing courses can use the data or displays during regular instruction?</dd></div>
+          <div><dt>Student learning</dt><dd>Can a student explain how a change in one room affects another team’s work?</dd></div>
+          <div><dt>Operational performance</dt><dd>Can students and instructors see whether events reach the servers and displays, and who follows up when they don’t?</dd></div>
+        </dl>
+
+        <details class="speaker-notes" id="speaker-notes" open>
+          <summary><span>Speaker notes</span><small>90-second opening</small></summary>
+          <div class="notes-content" id="opening">
+            <p>In ITEC, the building itself becomes part of the course. A robotics student could make a change during an ordinary class and see it travel through the same systems another class is learning to operate.</p>
+            <p>Picture a student adding an inspection step on the APT line we’re considering. The network carries the new event upstairs. In the second-level Instructional Server Center, students can see it arrive at the rack-mounted servers and verify that it was saved. The Data Analytics Lab puts the change on a large screen, and a supply chain student can ask what it means for when a batch will be ready.</p>
+            <p>We can do the same with the building’s HVAC readings. We’d also have two cybersecurity centers. One would monitor Sinclair’s live systems. In the other, students would practice with simulations. Each course keeps its learning goals. The building lets students see who depends on their work and what happens after they make a decision.</p>
+          </div>
+          <div class="notes-actions">
+            <button class="copy-button" type="button" data-copy hidden>Copy opening</button>
+            <span class="copy-status" role="status" data-copy-status></span>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="assets/sinclair-stacked.png" width="418" height="274" loading="lazy" alt="Sinclair College">
+        <div><strong>Integrated Technology Education Center</strong><p>Board briefing</p></div>
+      </div>
+      <nav aria-label="Project sources">
+        <a href="https://www.sinclair.edu/news/article/sinclair-announces-integrated-technology-education-center-itec-a-30-million-initiative-set-to-meet-the-convergence-of-it-cybersecurity-ai/">Sinclair project announcement <span aria-hidden="true">↗</span></a>
+        <a href="https://dam.assets.ohio.gov/image/upload/ofcc.ohio.gov/Portals/0/Documents/Opportunities/RFQ/2025/RFQ-SCC-002621X-AE.pdf">Building 8 design brief <span aria-hidden="true">↗</span></a>
+        <a href="https://aptmfg.com/products/csm/">APT product information <span aria-hidden="true">↗</span></a>
+        <a href="https://ifr.org/post/the-mobile-revolution">Mobile robots in logistics <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </footer>
+
+  <dialog class="plan-dialog" aria-labelledby="enlarged-plan-title" data-plan-dialog>
+    <div class="plan-dialog-head">
+      <h2 id="enlarged-plan-title">Floor plan</h2>
+      <form method="dialog"><button type="submit">Close</button></form>
+    </div>
+    <div class="plan-dialog-image"></div>
+  </dialog>
+
+  <article class="print-only" aria-label="Printable ITEC board briefing">
+    <div class="print-brand">
+      <img src="assets/sinclair-horizontal-hires.png" width="3000" height="744" alt="Sinclair College">
+      <p class="eyebrow">Board briefing</p>
+    </div>
+    <h1>ITEC | The building is part of the course</h1>
+    <p class="print-intro">In Building 8, students could see how a change they make during a regular class affects the systems and people in other rooms. Each course keeps its learning objectives while the building makes those connections visible.</p>
+    <h2>What happens when a robot changes?</h2>
+    <p>Sinclair is considering APT’s Connected Smart Manufacturing system. If a robotics class adds an inspection step, the robot’s controller reports a new event. The Network Engineering / Fiber Optics Lab supports the classroom network that carries it to the second-level Instructional Server Center (ISC). Students there verify the event was saved in the teaching database hosted on the rack-mounted servers. The Data Analytics Lab puts the change on a large screen so another class can see its effect.</p>
+    <h2>What else can students see?</h2>
+    <p>Analytics students work with data from Smart Factory, Robotics, Supply Chain / RFID, Internet of Things, and Emerging Tech. The lab also brings building-wide HVAC and facility readings to the large displays. Students can compare a fan’s start time with temperature readings and explain what they would ask Facilities to check.</p>
+    <h2>From production to inventory</h2>
+    <p>Robotics students make and pack a batch. RFID students verify the tags. A proposed mobile robot carries the tote to a receiving classroom, where supply chain students compare what arrived with what was expected and post inventory. ISC students capture the events and use SQL to connect production, transport, and receiving records.</p>
+    <h2>Two cybersecurity operations centers</h2>
+    <p>The Working SNOC would actively monitor Sinclair’s cybersecurity. In the Teaching SNOC, students would practice reviewing and responding to simulated incidents.</p>
+    <h2>Communication in Context</h2>
+    <p>The equipment and network carry the signal. Students give it meaning by explaining what happened, who needs to know, and what another team can do with that information. Faculty, IT, and Facilities support day-to-day operation and maintenance.</p>
+    <p class="print-sources"><a href="https://www.sinclair.edu/news/article/sinclair-announces-integrated-technology-education-center-itec-a-30-million-initiative-set-to-meet-the-convergence-of-it-cybersecurity-ai/">Sinclair’s project announcement</a> · <a href="https://aptmfg.com/products/csm/">APT Connected Smart Manufacturing</a> · <a href="https://thecommcontext.com/">Communication in Context</a></p>
+  </article>
+</body>
+</html>
