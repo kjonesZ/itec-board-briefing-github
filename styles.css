@@ -648,7 +648,7 @@ section[id], div[id], details[id] { scroll-margin-top: 1.5rem; }
   .print-flow h3 { margin-bottom: 0.035in; font: 700 10pt/1.22 var(--sans); }
   .print-flow p { color: var(--subtle); font-size: 9.75pt; }
 
-  .print-handoff { padding: 0.10in 0.14in; border: 0.75pt solid var(--muted-line); break-inside: avoid; }
+  .print-skills { padding: 0.10in 0.14in; border: 0.75pt solid var(--muted-line); break-inside: avoid; }
   .print-connections > div {
     display: grid;
     grid-template-columns: 1.44in minmax(0, 1fr);
