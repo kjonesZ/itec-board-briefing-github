@@ -180,6 +180,18 @@ section[id], div[id], details[id] { scroll-margin-top: 1.5rem; }
 .hero-image figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.25rem 0.9rem; padding: 0.72rem 0; }
 .hero-image figcaption strong { color: var(--ink); font-weight: 700; }
 
+.strategy-quote {
+  margin-block: 0 clamp(2.75rem, 5vw, 4.25rem);
+  padding: clamp(1.1rem, 2.4vw, 2rem) clamp(1.2rem, 3.3vw, 2.75rem);
+  border-inline-start: 3px solid var(--brand-red);
+  background: var(--tint);
+  color: var(--ink);
+  font: 400 clamp(1.5rem, 2.45vw, 2.2rem)/1.22 var(--serif);
+  scroll-margin-top: 1.5rem;
+}
+
+.strategy-quote p { max-width: 72rem; }
+
 .section-pad { padding-block: clamp(3.4rem, 7vw, 6.75rem); }
 .section-lead {
   display: grid;
@@ -635,6 +647,10 @@ section[id], div[id], details[id] { scroll-margin-top: 1.5rem; }
         <figcaption><strong>Building 8 · Dayton Campus</strong><span>Concept illustration</span></figcaption>
       </figure>
     </section>
+
+    <blockquote class="strategy-quote wrap" id="strategy-quote">
+      <p>Sinclair's Integrated Technology Strategy brings people from different disciplines into conversation and learning around a shared problem, so students connect technical knowledge with the setting in which it is used. ITEC will provide a dedicated experiential learning facility designed to create these experiences.</p>
+    </blockquote>
 
     <section id="vision" class="vision" aria-labelledby="vision-title">
       <div class="wrap section-pad">
